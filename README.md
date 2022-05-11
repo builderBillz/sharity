@@ -1,0 +1,4 @@
+SHARITY
+
+ERD Framework:
+https://miro.com/welcomeonboard/U3EyOFNuQWI3ckgzcEVHVkVMakFsZHNVNGNjazdIM3JONjFVTzI1QmdzUFBKRmZxdHZDZHEyN1o4RlpEenFEMXwzNDU4NzY0NTE0NzE2NjgzNTY2?share_link_id=251756997855
