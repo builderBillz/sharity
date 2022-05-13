@@ -5,7 +5,7 @@ CREATE DATABASE sharify_users;
 
 DROP TABLE IF EXISTS users;
 CREATE TABLE users (
-    user_id SERIAL PRIMARY KEY, 
+    id SERIAL PRIMARY KEY, 
     username TEXT UNIQUE NOT NULL, 
     first_name TEXT NOT NULL,
     last_name TEXT NOT NULL,

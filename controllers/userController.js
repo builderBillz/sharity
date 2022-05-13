@@ -33,7 +33,7 @@ users.delete("/:id", async (request, response) => {
     const deletedUser = await deleteUser(request.params.id);
     //returns deleted User
     console.log(deletedUser)
-    if(deletedUser){
+    if(!deletedUser){
     response.status(200).json(deletedUser);
     } //if the id exists, respond.
     else{

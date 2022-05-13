@@ -11,8 +11,11 @@ app.use(cors());
 app.use(express.json());
 
 // ROUTES
-app.get("/", (_, res) => {
+app.get("/", (request, res) => {
   res.send("Hello World");
 });
+
+const userController = require("./controllers/userController.js");
+app.use("/users", userController)
 
 module.exports = app;
