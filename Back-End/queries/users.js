@@ -43,8 +43,9 @@ const deleteUser = async (id) => {
   //query method .one
   //DELETE FROM users WHERE id=id, RETURNING*
   try {
-    const user = await db.one("DELETE FROM users WHERE id=$1 RETURNING *", id);
-  } catch (err) {
+    const deletedUser = await db.one("DELETE FROM users WHERE id=$1 RETURNING *", id);
+    return deletedUser;
+    } catch (err) {
     return err;
   }
 };
