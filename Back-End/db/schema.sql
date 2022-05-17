@@ -12,3 +12,12 @@ CREATE TABLE users (
     password TEXT NOT NULL,
     email TEXT
 );
+
+DROP TABLE IF EXISTS products;
+CREATE TABLE products (
+    id SERIAL PRIMARY KEY,
+    image TEXT,
+    name TEXT NOT NULL,
+    description TEXT,
+    price INT,
+);
