@@ -11,7 +11,7 @@ function Product({ product }) {
 
           <p>{product.price}</p>
 
-          <p>{product.category}</p>
+          <img src={product.image} alt={product.name} />
         </div>
       </div>
     </div>
