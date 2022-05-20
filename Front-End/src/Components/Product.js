@@ -1,21 +1,21 @@
-import { Link } from "react-router-dom";
-
-function Product({ product, id }) {
+function Product({ product }) {
   // const {  } = useState;
 
   return (
     <div className="container">
       <div className="productCard">
         <div>
-          <p>
-            <Link to={`/products/${id}`}>{product.name}</Link>
-          </p>
+          <p>{product.name}</p>
 
           <p>{product.description}</p>
 
           <p>{product.price}</p>
+
+          <p>{product.category}</p>
         </div>
       </div>
     </div>
   );
 }
+
+export default Product;
