@@ -15,9 +15,9 @@ CREATE TABLE users (
 
 DROP TABLE IF EXISTS products;
 CREATE TABLE products (
-    id SERIAL PRIMARY KEY,
-    image TEXT,
-    name TEXT NOT NULL,
+    id SERIAL PRIMARY KEY, 
+    name TEXT NOT NULL, 
     description TEXT,
-    price INT,
+    price INT NOT NULL,
+    image TEXT
 );
