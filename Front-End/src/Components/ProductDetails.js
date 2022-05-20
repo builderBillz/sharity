@@ -5,22 +5,23 @@ import { useParams } from 'react-router-dom';
 
 const ProductDetails = () => {
     const URL = process.env.REACT_APP_API_URL;
-    const [Product, setProduct] = useState([]);
+    const [product, setProduct] = useState([]);
     const { id } = useParams();
 
     useEffect(() => {
         axios
-        .get(`${URL}/Products/{{id}}`)
+        .get(`${URL}/products/${id}`)
         .then((response) => {
+            console.log(response.data)
             setProduct(response.data);
         })
-    }, []);
+    }, [URL, id]);
 
-    const { image, name, description, price } = Product;
+    const { image, name, description, price } = product;
     return (
 
         <div>
-            <img src="" alt="" width="" height="" />
+            <img src={image} alt={name} width="200px" height="200px" />
             <h3>{name}</h3>
             <h3>{description}</h3>
             <h3>{price}</h3>
