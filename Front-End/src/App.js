@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 // Pages
 import Home from "./Pages/Home";
 import Test from "./Pages/Test";
-import ProductDetails from "./Components/ProductDetails.js";
+import ProductDetails from "./Components/ProductDetails/ProductDetails.js";
 import Products from "./Components/Products/Products";
 
 // Components
