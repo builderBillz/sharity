@@ -32,7 +32,7 @@ products.get("/:id", async (request, response) => {
 products.post("/", async (request, response) => {
     const product = await newProduct(request.body);
     response.status(200).json(product);
-  }); //create new user
+  }); //create new product
 
 
 // Delete product
