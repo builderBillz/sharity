@@ -38,12 +38,14 @@ products.post("/", async (request, response) => {
 // Delete product
 products.delete("/:id", async (request, response) => {
   console.log("DELETE request to /products/:id");
-  const deletedProduct = await deleteProduct(request.params.body);
-  if (deleteProduct.id) {
-    response.status(200).json(deletedProduct);
-  } else {
-    response.status(404).json("not found");
-  }
+  const deletedProduct = await deleteProduct(request.params.id);
+  if (deletedProduct.id) {
+      response.status(200).json(deletedProduct);
+    } else {
+        response.status(404).json("not found");
+    }
+    // console.log(deletedProduct)
+    // console.log(request.params.id)
 });
 
 // Update product
@@ -53,7 +55,7 @@ products.put("/:id", async (req, res) => {
     if (updatedProduct.id) {
       res.status(200).json(updatedProduct);
     } else {
-      res.status(404).json("Product not found");
+      res.status(404).json(updatedProduct);
     }
   });
 

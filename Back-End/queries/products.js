@@ -56,7 +56,7 @@ const deleteProduct = async (id) => {
 //UPDATE
 const updateProduct = async ({ name, description, price, image }, id) => {
     try {
-        const updatedProduct = await db.one("UPDATE products SET name =$1, description=$2, price=$3, image=$4 WHERE id=$5 RETURNING *", [name, description, price, image]);
+        const updatedProduct = await db.one("UPDATE products SET name =$1, description=$2, price=$3, image=$4 WHERE id=$5 RETURNING *", [name, description, price, image, id]);
         return updatedProduct;
     } catch (err) {
         return err;
