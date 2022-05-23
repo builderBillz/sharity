@@ -6,6 +6,7 @@ import Home from "./Pages/Home";
 import Test from "./Pages/Test";
 import ProductDetails from "./Components/ProductDetails/ProductDetails.js";
 import Products from "./Components/Products/Products";
+import NavBar from "./Components/NavBar/NavBar";
 
 // Components
 
@@ -16,7 +17,7 @@ function App() {
   return (
     <div className="App">
       {/* <p>Hello Fantastics</p> */}
-
+      <NavBar />
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/users" element={<Test />} />
