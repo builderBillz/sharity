@@ -7,6 +7,7 @@ import Test from "./Pages/Test";
 import ProductDetails from "./Components/ProductDetails/ProductDetails.js";
 import Products from "./Components/Products/Products";
 import NavBar from "./Components/NavBar/NavBar";
+import ShoppingCart from "./Components/ShoppingCart/ShoppingCart";
 
 // Components
 
@@ -23,6 +24,7 @@ function App() {
         <Route path="/users" element={<Test />} />
         <Route path="/products/:id" element={<ProductDetails />} />
         <Route path="/products" element={<Products />}/>
+        <Route path="/shoppingCart" element={<ShoppingCart />}/>
       </Routes>
     </div>
   );

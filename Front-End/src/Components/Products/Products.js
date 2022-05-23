@@ -30,7 +30,7 @@ function Products() {
     return(
         <div className="products">
             <header>
-                <button onClick={() => navigate(<ShoppingCart />)}>Go to Cart ({bag.length})</button>
+                <button onClick={() => navigate("/shoppingCart")}>Go to Cart ({bag.length})</button>
             </header>
             <br></br>
             <br></br>

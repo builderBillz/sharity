@@ -3,9 +3,9 @@ import Product from '../Product/Product';
 
 const ShoppingCart = () => {
 
-    // const removeFromBag = (ProductToRemove) => {
-    //     SetCart(cart.filter(products => products !== productToRemove))
-    // }
+    const removeFromBag = (ProductToRemove) => {
+        SetCart(cart.filter(products => products !== productToRemove))
+    }
   return (
       <>
     <h1>ShoppingCart</h1>
