@@ -17,6 +17,9 @@ const NavBar = () => {
         <ul>
         <Link to="/account">My Account</Link>
         </ul>
+        <ul>
+        <Link to="/cart">Cart</Link>
+        </ul>
     </nav>
     </>
   );
