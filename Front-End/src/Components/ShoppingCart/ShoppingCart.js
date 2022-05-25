@@ -1,24 +1,26 @@
 import React from 'react'
-import Product from '../Product/Product';
 
-const ShoppingCart = () => {
+const ShoppingCart = (props) => {
 
-    const removeFromBag = (ProductToRemove) => {
-        SetCart(cart.filter(products => products !== productToRemove))
-    }
+const HandleDelete = (event) => {
+    props.func(event.target.id) 
+    //this 
+}
+    console.log(props.cart)
   return (
       <>
-    <h1>ShoppingCart</h1>
-    {/* {{bag.map((product, id) => (
-        <div className='product' key={id}>
-        <h3>{product.name}</h3>
-        <h4>{product.description}</h4>
-        <h4>{product.price}</h4>
-        <button onClick={()=> removeFromBag(productToRemove)} />
-        </div>
-    ))}} */}
+        <h1>ShoppingCart</h1>
+            {props.cart.map((product, id) => (
+                <div className='product' key={id} >
+                    <img src={product.image} alt={product.name} />
+                    <h3>{product.name}</h3>
+                    <h4>{product.description}</h4>
+                    <h4>{product.price}</h4>
+                    <button onClick={HandleDelete} id={product.id} >Remove</button> 
+                </div>
+            ))}
       </>
   )
-}
+};
 
 export default ShoppingCart;

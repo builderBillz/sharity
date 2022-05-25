@@ -1,4 +1,4 @@
-function Product({ product, addToBag }) {
+function Product({ product, addToCart }) {
 //passed addToBag as props from products components to update how many items in cart
 
   return (
@@ -9,7 +9,7 @@ function Product({ product, addToBag }) {
           <p>{product.name}</p>
           <p>{product.description}</p>
           <p>{product.price}</p>
-          <button onClick={() => addToBag(product)}>Add to Cart</button>
+          <button onClick={() => addToCart(product)}>Add to Cart</button>
           <br></br>
           <br></br>
         </div>
