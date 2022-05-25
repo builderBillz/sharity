@@ -4,7 +4,7 @@ const { getAllUsers, getUser, newUser, deleteUser, updateUser, getLoggedUser} = 
 
 const users = express.Router();
 
-users.get("/", async (request, response) => {
+users.get("/users", async (request, response) => {
   console.log("GET request to /users");
   const allUsers = await getAllUsers();
   if (allUsers.length === 0) {//if there are no users, give err
@@ -15,7 +15,7 @@ users.get("/", async (request, response) => {
   response.status(200).json(allUsers); //return all users
 });
 
-users.post("/signin", async(request, response) =>{
+users.post("/", async(request, response) =>{
   console.log("get logged user")
   const user = await getLoggedUser(request.body);
   console.log(request.body)
@@ -27,7 +27,7 @@ users.post("/signin", async(request, response) =>{
 })
 
   //SHOW 
- users.get("/:id", async (request, response) => {
+ users.get("/users/:id", async (request, response) => {
     console.log("GET request to /users/:id");
     const user = await getUser(request.params.id);
     response.status(200).json(user);
@@ -39,7 +39,7 @@ users.post("/signin", async(request, response) =>{
 
 
 //DELETE
-users.delete("/:id", async (request, response) => {
+users.delete("/users/:id", async (request, response) => {
     const deletedUser = await deleteUser(request.params.id);
     //returns deleted User
     if(deletedUser){
@@ -58,7 +58,7 @@ users.delete("/:id", async (request, response) => {
       }); //create new user
 
       //UPDATE
-      users.put("/:id", async (request, response) => {
+      users.put("/users/:id", async (request, response) => {
         const updatedUser = await updateUser(request.params.id, request.body);
         if(updatedUser.id) {
         response.status(200).json(updatedUser)
