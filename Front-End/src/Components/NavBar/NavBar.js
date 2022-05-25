@@ -6,20 +6,28 @@ const NavBar = () => {
    <>
    <nav className='NavBar'>
       <ul>
-        <Link to='/'>Home</Link>
+      
+        <Link to='/'>Sharity</Link>
+       
       </ul>
+
+      <div className="links">
       <ul>
         <Link to="/about">About Us</Link>
         </ul>
+        
         <ul>
         <Link to="/products">Products</Link>
         </ul>
+
         <ul>
         <Link to="/account">My Account</Link>
         </ul>
+        
         <ul>
         <Link to="/cart">Cart</Link>
         </ul>
+        </div>
     </nav>
     </>
   );
