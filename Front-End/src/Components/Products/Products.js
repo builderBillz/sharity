@@ -42,7 +42,7 @@ function Products(props) {
             <article>
                 {products.map((product) => {
                     return <Product key={product.id} product={product}  addToCart={addToCart} />
-                })};
+                })}
             </article>
 
         </div>
