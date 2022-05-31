@@ -32,12 +32,12 @@ function Products(props) {
 
     return(
         <div className="products">
-            <header>
+            {/* <header>
                 <button
                  onClick={() => navigate("/shoppingCart")}>Go to Cart ({props.cart.length})</button>
             </header>
             <br></br>
-            <br></br>
+            <br></br> */}
             
             <article>
                 {products.map((product) => {
