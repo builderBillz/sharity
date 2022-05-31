@@ -15,7 +15,7 @@ app.get("/", (request, res) => {
 });
 
 const userController = require("./controllers/userController");
-app.use("/users", userController);
+app.use("/signin", userController);
 
 
 
