@@ -10,6 +10,7 @@ import Products from "./Components/Products/Products";
 import LogIn from "./Components/LogIn";
 import NavBar from "./Components/NavBar/NavBar";
 import ShoppingCart from "./Components/ShoppingCart/ShoppingCart";
+import New from "./Pages/New";
 
 // Components
 
@@ -64,17 +65,10 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route path="/users" element={<Test />} />
         <Route path="/products/:id" element={<ProductDetails />} />
+        <Route path="/products" element={<Products func={addToCart} cart={cart} />}/>
+        <Route path="/newproduct" element={<New />}/>
+        <Route path="/shoppingCart" element={<ShoppingCart func={removeFromCart} setCart={setCart}  cart={cart} />}/>
         <Route path="/account" element={<LogIn />} />
-        <Route
-          path="/products"
-          element={<Products func={addToCart} cart={cart} />}
-        />
-        <Route
-          path="/shoppingCart"
-          element={
-            <ShoppingCart func={removeFromCart} setCart={setCart} cart={cart} />
-          }
-        />
       </Routes>
     </div>
   );
