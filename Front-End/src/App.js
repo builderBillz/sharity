@@ -59,7 +59,7 @@ function App() {
   return (
     <div className="App">
       {/* <p>Hello Fantastics</p> */}
-      <NavBar />
+      <NavBar cart={cart} />
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/users" element={<Test />} />
