@@ -11,6 +11,7 @@ import LogIn from "./Components/LogIn";
 import NavBar from "./Components/NavBar/NavBar";
 import ShoppingCart from "./Components/ShoppingCart/ShoppingCart";
 import New from "./Pages/New";
+import EditProduct from "./Components/EditProduct.js/EditProductDetails";
 
 // Components
 
@@ -67,6 +68,7 @@ function App() {
         <Route path="/products/:id" element={<ProductDetails />} />
         <Route path="/products" element={<Products func={addToCart} cart={cart} />}/>
         <Route path="/newproduct" element={<New />}/>
+        <Route path="/products/:id/edit" element={<EditProduct />}/>
         <Route path="/shoppingCart" element={<ShoppingCart func={removeFromCart} setCart={setCart}  cart={cart} />}/>
         <Route path="/account" element={<LogIn />} />
       </Routes>
