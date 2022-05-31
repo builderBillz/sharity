@@ -1,23 +1,33 @@
 const express = require("express");
 
-const { getAllUsers, getUser, newUser, deleteUser, updateUser} = require("../queries/users");
+const { getAllUsers, getUser, newUser, deleteUser, updateUser, getLoggedUser} = require("../queries/users");
 
 const users = express.Router();
 
-users.get("/", async (request, response) => {
-    console.log("GET request to /users");
-    const allUsers = await getAllUsers();
-    if (allUsers.length === 0) {//if there are no users, give err
-      response.status(500).json({ error: "User not found." });
-      return;
-    }
-    //else
-    response.status(200).json(allUsers); //return all users
-  });
+users.get("/users", async (request, response) => {
+  console.log("GET request to /users");
+  const allUsers = await getAllUsers();
+  if (allUsers.length === 0) {//if there are no users, give err
+    response.status(500).json({ error: "User not found." });
+    return;
+  }
+  //else
+  response.status(200).json(allUsers); //return all users
+});
 
+users.post("/", async(request, response) =>{
+  console.log("get logged user")
+  const user = await getLoggedUser(request.body);
+  console.log(request.body)
+  if(user.username){
+    response.status(202).json(user.username);
+  } else {
+    response.status(400).json("Error User not Found")
+  }
+})
 
   //SHOW 
- users.get("/:id", async (request, response) => {
+ users.get("/users/:id", async (request, response) => {
     console.log("GET request to /users/:id");
     const user = await getUser(request.params.id);
     response.status(200).json(user);
@@ -29,7 +39,7 @@ users.get("/", async (request, response) => {
 
 
 //DELETE
-users.delete("/:id", async (request, response) => {
+users.delete("/users/:id", async (request, response) => {
     const deletedUser = await deleteUser(request.params.id);
     //returns deleted User
     if(deletedUser){
@@ -48,7 +58,7 @@ users.delete("/:id", async (request, response) => {
       }); //create new user
 
       //UPDATE
-      users.put("/:id", async (request, response) => {
+      users.put("/users/:id", async (request, response) => {
         const updatedUser = await updateUser(request.params.id, request.body);
         if(updatedUser.id) {
         response.status(200).json(updatedUser)
@@ -57,6 +67,7 @@ users.delete("/:id", async (request, response) => {
         response.status(404).json(updatedUser);
         }
         });
+
 
 
       module.exports = users;

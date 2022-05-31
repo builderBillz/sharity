@@ -15,10 +15,11 @@ app.get("/", (request, res) => {
 });
 
 const userController = require("./controllers/userController");
-const productsController = require("./controllers/productsController");
+app.use("/signin", userController);
 
-app.use("/users", userController);
+
+
+const productsController = require("./controllers/productsController.js");
 app.use("/products", productsController);
-
 
 module.exports = app;

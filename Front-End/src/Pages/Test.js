@@ -1,5 +1,5 @@
 import React from "react";
-import Users from "../Components/Users";
+import Users from "../Components/User/Users";
 
 const Test = () => {
   return (
