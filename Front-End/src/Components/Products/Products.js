@@ -1,17 +1,16 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 import Product from "../Product/Product"
-import {  useNavigate } from "react-router-dom";
+import { useCart } from "react-use-cart";
+import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import { Container, Row, Col } from "react-bootstrap";
 
 
 function Products(props) {
 
-    const navigate = useNavigate();
     const URL = process.env.REACT_APP_API_URL
     const [products, setProducts] = useState([])
-   // const [cart, setCart] = useState([]);
 
-    //console.log(URL)
     useEffect(() => {
         axios
         .get(`${URL}/products`)
@@ -23,29 +22,25 @@ function Products(props) {
     },[URL])
 
     const addToCart = (item) => {
-    //console.log('we are in addToCart')
-     //   setCart([...cart, item]);
-     props.func(item)
+    props.func(item)
     };
-    console.log(props.cart);
+
 
 
     return(
-        <div className="products">
-            {/* <header>
-                <button
-                 onClick={() => navigate("/shoppingCart")}>Go to Cart ({props.cart.length})</button>
-            </header>
-            <br></br>
-            <br></br> */}
-            
-            <article>
-                {products.map((product) => {
-                    return <Product key={product.id} product={product}  addToCart={addToCart} />
-                })}
-            </article>
+        //<div className="container-fluid">
+            <Container>
+                <Row>
+                    {products.map(product => (
+                    <Col  xs={4} className="mb-5" key={product.id}>
+                        <Product key={product.id} product={product}  addToCart={addToCart} />
+                    </Col> 
+                    ))}
+                        
+                </Row>
+            </Container>
 
-        </div>
+       // </div>
     )
 }
 
