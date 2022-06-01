@@ -11,11 +11,12 @@ import ProductDetails from "./Components/ProductDetails/ProductDetails.js";
 import Products from "./Components/Products/Products";
 import NavBar from "./Components/NavBar/NavBar";
 import ShoppingCart from "./Components/ShoppingCart/ShoppingCart";
+import New from "./Pages/New";
+import EditProduct from "./Components/EditProduct.js/EditProductDetails";
 
 // Components
 import About from './Components/Profiles/About';
-import Login from './Components/myAccount/LogIn';
-import { SignUpForm } from "./Components/myAccount/SignUpForm";
+import LogIn from "./Components/myAccount/LogIn";
 
 function App() {
   // const URL = process.env.REACT_APP_API_URL
@@ -63,23 +64,17 @@ function App() {
   return (
     <div className="App">
       {/* <p>Hello Fantastics</p> */}
-      <NavBar />
+      <NavBar cart={cart} />
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/users" element={<Test />} />
         <Route path="/products/:id" element={<ProductDetails />} />
-        <Route path="/account" element={<Login />} />
-        <Route
-          path="/products"
-          element={<Products func={addToCart} cart={cart} />}
-        />
-        <Route
-          path="/shoppingCart"
-          element={
-            <ShoppingCart func={removeFromCart} setCart={setCart} cart={cart} />
-          }
-        />
-        <Route path='/about' element={<About />}/>
+        <Route path="/products" element={<Products func={addToCart} cart={cart} />}/>
+        <Route path="/newproduct" element={<New />}/>
+        <Route path="/products/:id/edit" element={<EditProduct />}/>
+        <Route path="/shoppingCart" element={<ShoppingCart func={removeFromCart} setCart={setCart}  cart={cart} />}/>
+        <Route path="/account" element={<LogIn />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </div>
   );

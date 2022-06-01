@@ -12,7 +12,7 @@ const HandleDelete = (event) => {
         <h1>ShoppingCart</h1>
             {props.cart.map((product, id) => (
                 <div className='product' key={id} >
-                    <img src={product.image} alt={product.name} />
+                    <img src={product.image} alt={product.name} width="18%" />
                     <h3>{product.name}</h3>
                     <h4>{product.description}</h4>
                     <h4>{product.price}</h4>
