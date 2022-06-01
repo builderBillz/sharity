@@ -1,7 +1,7 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
-import { useCart } from "react-use-cart";
+import { CartProvider } from "react-use-cart";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 // Pages

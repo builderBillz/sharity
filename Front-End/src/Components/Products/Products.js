@@ -29,7 +29,7 @@ function Products(props) {
 
     return(
         //<div className="container-fluid">
-            <Container>
+            <Container className="container-fluid py-5">
                 <Row>
                     {products.map(product => (
                     <Col  xs={4} className="mb-5" key={product.id}>
