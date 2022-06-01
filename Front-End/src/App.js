@@ -1,17 +1,21 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
 
 // Pages
 import Home from "./Pages/Home";
 import Test from "./Pages/Test";
 import ProductDetails from "./Components/ProductDetails/ProductDetails.js";
 import Products from "./Components/Products/Products";
-import LogIn from "./Components/LogIn";
 import NavBar from "./Components/NavBar/NavBar";
 import ShoppingCart from "./Components/ShoppingCart/ShoppingCart";
 
 // Components
+import About from './Components/Profiles/About';
+import Login from './Components/myAccount/LogIn';
+import { SignUpForm } from "./Components/myAccount/SignUpForm";
 
 function App() {
   // const URL = process.env.REACT_APP_API_URL
@@ -64,7 +68,7 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route path="/users" element={<Test />} />
         <Route path="/products/:id" element={<ProductDetails />} />
-        <Route path="/account" element={<LogIn />} />
+        <Route path="/account" element={<Login />} />
         <Route
           path="/products"
           element={<Products func={addToCart} cart={cart} />}
@@ -75,6 +79,7 @@ function App() {
             <ShoppingCart func={removeFromCart} setCart={setCart} cart={cart} />
           }
         />
+        <Route path='/about' element={<About />}/>
       </Routes>
     </div>
   );
