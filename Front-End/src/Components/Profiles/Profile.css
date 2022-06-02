@@ -1,0 +1,44 @@
+
+.profile {
+    box-shadow: 0 4px 8px 0 black(0, 0, 0, 0.2);
+    margin: 20px;
+    float: left;
+    width: 45%;
+    margin-bottom: 17px;
+    padding: 0 8px;
+    padding-bottom: 27px;
+    color: blue;
+    /* background-color: #a8a6a5 */
+
+}
+
+.bio {
+    font-size: 25px;
+    text-align: center;
+    padding: 4px;
+}
+
+.profile img {
+    object-fit: cover;
+    float: left;
+    width: 360px;
+    height: 360px;
+    padding: 15px;
+    padding-left: 20px;
+}
+
+.name {
+    text-align: center;
+    font-size: 30px;
+}
+
+a {
+    display: block;
+    text-align: center;
+    font-size: 30px;
+}
+
+.github:visited {
+    color: blue;
+}
+
