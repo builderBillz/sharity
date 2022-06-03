@@ -32,7 +32,7 @@ function Products(props) {
             <Container className="container-fluid py-5">
                 <Row>
                     {products.map(product => (
-                    <Col  xs={4} className="mb-5" key={product.id}>
+                    <Col  xs={4} className="md-4" key={product.id}>
                         <Product key={product.id} product={product}  addToCart={addToCart} />
                     </Col> 
                     ))}

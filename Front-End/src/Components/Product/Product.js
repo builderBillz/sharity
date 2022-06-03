@@ -11,10 +11,10 @@ function Product({ product, addToCart }) {
 
             <Card.Title>{product.name}</Card.Title>
             <Card.Text className="text-secondary">{product.description}</Card.Text>
-            <Card.Text className="fw-bolder">${product.price}</Card.Text>
+            <Card.Text className="card text-end fw-bolder">${product.price}</Card.Text>
             <div className="d-grid justify-content-end mt-4">
 
-            <Button variant="primary"  onClick={() => addToCart(product)}>Add to Cart</Button>
+            <Button className="btn btn-outline-light"  onClick={() => addToCart(product)}>Buy now</Button>
             </div>
 
           </Card.Body>
