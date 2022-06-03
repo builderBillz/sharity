@@ -17,7 +17,7 @@ const getProduct = async (id) => {
         const product = await db.one("SELECT * FROM products WHERE id=$1", id);//.one returns one item. .any returns an array of one object **sql interpolation**
         //const product = await db.one(`select * from products where ${id} = id)
         return product;
-    } catch (error) {
+    } catch (error) { 
         return error;
     }
 };
@@ -26,12 +26,13 @@ const getProduct = async (id) => {
 const newProduct = async (product) => {
     try {
       const newProducts = await db.one(
-        "INSERT INTO products (name, description, price, image) VALUES($1, $2, $3, $4) RETURNING *",
+        "INSERT INTO products (name, description, price, image, category) VALUES($1, $2, $3, $4, $5) RETURNING *",
         [
           product.name,
           product.description,
           product.price,
           product.image,
+          product.category,
         ]
       );
       return newProducts;
@@ -56,9 +57,9 @@ const deleteProduct = async (id) => {
 //UPDATE
 const updateProduct = async (id, product) => {
     try {
-    const { name, description, price, image } = product
+    const { name, description, price, image, category } = product
 
-    const updatedProduct = await db.one("UPDATE products SET name =$1, description=$2, price=$3, image=$4 WHERE id=$5 RETURNING *", [name, description, price, image, id]);
+    const updatedProduct = await db.one("UPDATE products SET name =$1, description=$2, price=$3, image=$4, category=$5 WHERE id=$6 RETURNING *", [name, description, price, image, category, id]);
         return updatedProduct;
     } catch (err) {
         return err;

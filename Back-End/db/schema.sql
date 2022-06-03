@@ -19,5 +19,6 @@ CREATE TABLE products (
     name TEXT NOT NULL, 
     description TEXT,
     price INT NOT NULL,
-    image TEXT
+    image TEXT,
+    category TEXT
 );

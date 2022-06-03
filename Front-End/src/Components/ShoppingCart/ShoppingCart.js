@@ -24,6 +24,10 @@ const HandleDelete = (event) => {
 
 //     </div>
 
+const prices = props.cart.map((product) => product.price)
+const total = prices.reduce((a,b) => a + b )
+console.log(total)
+
 return (
     <div className='container-fluid py-5'>
         <div className='row gy-4'>
@@ -56,6 +60,9 @@ return (
                     </div>
                 </div>
             </div>
+        </div>
+        <div>
+            <p>Subtotal = ${total}</p>
         </div>
     </div>
 )
