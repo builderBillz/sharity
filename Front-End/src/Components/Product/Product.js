@@ -1,4 +1,4 @@
-import { useCart } from "react-use-cart";
+
 import { Button, Card } from 'react-bootstrap';
 
 function Product({ product, addToCart }) {

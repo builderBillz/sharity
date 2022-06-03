@@ -1,7 +1,6 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 import Product from "../Product/Product"
-import { useCart } from "react-use-cart";
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from "react-bootstrap";
 

@@ -1,6 +1,5 @@
 import React from 'react'
 import './ShoppingCart.css';
-import { useCart } from "react-use-cart";
 
 const ShoppingCart = (props) => {
 
@@ -9,15 +8,15 @@ const HandleDelete = (event) => {
 }
     console.log(props.cart)
 
-    const {
-        isEmpty,
-        totalUniqueItems,
-        items,
-        totalItems,
-        cartTotal,
-        updateItemQuantity,
-        emptyCart,
-    } = useCart();
+    // const {
+    //     isEmpty,
+    //     totalUniqueItems,
+    //     items,
+    //     totalItems,
+    //     cartTotal,
+    //     updateItemQuantity,
+    //     emptyCart,
+    // } = useCart();
 
 // if(isEmpty) return <div>
 //     <h1 className='text-center py-5'>ShoppingCart</h1>
