@@ -1,12 +1,12 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 import Product from "../Product/Product"
-import {  useNavigate } from "react-router-dom";
+
 
 
 function Products(props) {
 
-    const navigate = useNavigate();
+    
     const URL = process.env.REACT_APP_API_URL
     const [products, setProducts] = useState([])
    // const [cart, setCart] = useState([]);
