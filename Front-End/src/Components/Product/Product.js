@@ -12,7 +12,8 @@ function Product({ product, addToCart }) {
             <p>{product.name}</p>
           </Link>
           <p>{product.description}</p>
-          <p>{product.price}</p>
+          <p>${product.price}</p>
+          <p>{product.category}</p>
           <button onClick={() => addToCart(product)}>Add to Cart</button>
           <br></br>
           <br></br>
