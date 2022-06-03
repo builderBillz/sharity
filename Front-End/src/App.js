@@ -3,19 +3,23 @@ import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
+
 // Pages
 import Home from "./Pages/Home";
 import Test from "./Pages/Test";
 import ProductDetails from "./Components/ProductDetails/ProductDetails.js";
 import Products from "./Components/Products/Products";
-import LogIn from "./Components/LogIn";
 import NavBar from "./Components/NavBar/NavBar";
 import ShoppingCart from "./Components/ShoppingCart/ShoppingCart";
 import New from "./Pages/New";
+import EditProduct from "./Components/EditProduct.js/EditProductDetails";
 
 // Components
+import About from './Components/Profiles/About';
+import LogIn from "./Components/myAccount/LogIn";
 
 function App() {
+
   const [cart, setCart] = useState([]);
 
 
@@ -33,7 +37,7 @@ function App() {
 
   return (
     <div className="App">
-      {/* <p>Hello Fantastics</p> */}
+    
       <NavBar cart={cart} />
       <Routes>
         <Route exact path="/" element={<Home />} />
@@ -41,8 +45,10 @@ function App() {
         <Route path="/products/:id" element={<ProductDetails />} />
         <Route path="/products" element={<Products func={addToCart} cart={cart} />}/>
         <Route path="/newproduct" element={<New />}/>
+        <Route path="/products/:id/edit" element={<EditProduct />}/>
         <Route path="/shoppingCart" element={<ShoppingCart func={removeFromCart} setCart={setCart}  cart={cart} />}/>
         <Route path="/account" element={<LogIn />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </div>
   );

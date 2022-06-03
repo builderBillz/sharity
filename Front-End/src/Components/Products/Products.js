@@ -5,8 +5,10 @@ import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from "react-bootstrap";
 
 
+
 function Products(props) {
 
+    
     const URL = process.env.REACT_APP_API_URL
     const [products, setProducts] = useState([])
 
