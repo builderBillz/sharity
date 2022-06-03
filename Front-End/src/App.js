@@ -19,42 +19,16 @@ import About from './Components/Profiles/About';
 import LogIn from "./Components/myAccount/LogIn";
 
 function App() {
-  // const URL = process.env.REACT_APP_API_URL
-  //const [products, setProducts] = useState([])
+
   const [cart, setCart] = useState([]);
 
-  // useEffect(() => {
-  //     axios
-  //     .get(`${URL}/products`)
-  //     .then((response) =>{
-  //         //console.log(response.data)
-  //         setProducts(response.data);
-  //     })
-  //     .catch((error) => console.log("error fetching products", error))
-  // },[URL])
 
   const addToCart = (products) => {
     console.log("we are in addToCart");
     setCart([...cart, products]);
   };
   console.log(cart);
-  // const renderCart = () => {
-  //   <>
-  //   <div className="products">
-  //     {cart.map((product, id) => (
-  //       <div className="product" key={id}>
-  //         <h3>{product.name}</h3>
-  //         <h4>{product.cost}</h4>
-  //         <img src={product.image} alt={product.name} />
-  //     </div>
-  //     ))}
-  //     </div>
-  //   </>
-  // }
-  // const HandleDelete = (id) => {
-  //   const remainder = cart.filter((x) => x.id != id);
-  //   setCart(remainder);
-  // };
+
 
   const removeFromCart = (id) => {
     console.log(id);
@@ -63,7 +37,7 @@ function App() {
 
   return (
     <div className="App">
-      {/* <p>Hello Fantastics</p> */}
+    
       <NavBar cart={cart} />
       <Routes>
         <Route exact path="/" element={<Home />} />
