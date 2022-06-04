@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import './ShoppingCart.css';
 
 const ShoppingCart = (props) => {
@@ -41,8 +42,16 @@ return (
                                 {props.cart.map((product, id) => {
                                     return (
                                         <tr className='align-middle' key={id} >
-                                        <td><img src={product.image} alt={product.name} width="55%" /></td>
-                                        <td className="card-title align-top fw-bolder">{product.name}</td>
+                                        <td>
+                                            <Link to={`/products/${product.id}`}>
+                                                <img src={product.image} alt={product.name} width="55%" />
+                                            </Link>
+                                            </td>
+                                        <td className="card-title align-top fw-bolder">
+                                            <Link to={`/products/${product.id}`}>
+                                                {product.name}
+                                            </Link>
+                                            </td>
                                         <td className="text-secondary">{product.description}</td>
                                         <td className="align-top fw-bolder">${product.price}</td>
                                         
