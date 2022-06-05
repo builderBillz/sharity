@@ -54,7 +54,7 @@ function App() {
         <Route path="/newproduct" element={<New />}/>
         <Route path="/products/:id/edit" element={<EditProduct />}/>
         <Route path="/shoppingCart" element={<ShoppingCart func={removeFromCart} setCart={setCart}  cart={cart} />}/>
-        <Route path="/account" element={<LogIn func={signIn}/>} />
+        <Route path="/account" element={<LogIn func={signIn} login={login}/>} />
         <Route path="/about" element={<About />} />
       </Routes>
     </div>
