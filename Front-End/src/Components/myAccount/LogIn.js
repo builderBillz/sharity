@@ -11,9 +11,9 @@ const AppContainer = styled.div`
   justify-content: center; 
 `;
 
-function LogIn(){
+function LogIn(props){
   return <AppContainer>
-    <AccountBox />
+    <AccountBox func={props.func}/>
   </AppContainer>
 }
 

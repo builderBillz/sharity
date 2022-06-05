@@ -149,7 +149,7 @@ export function AccountBox(props) {
             )}
         </TopContainer>
         <InnerContainer>
-            { active === 'signin' && <LogInForm /> }
+            { active === 'signin' && <LogInForm func={props.func}/> }
             { active === 'signup' && <SignUpForm /> }
             {/* <p onClick={playAnimation}>Click me!</p> */}
         </InnerContainer>
