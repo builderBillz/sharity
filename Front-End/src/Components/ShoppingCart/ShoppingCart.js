@@ -4,10 +4,9 @@ import './ShoppingCart.css';
 
 const ShoppingCart = (props) => {
 
-const HandleDelete = (event) => {
-    props.func(event.target.id) 
-}
-    console.log(props)
+    const HandleDelete = (event) => {
+        props.func(event.target.id) 
+        }
 
     // const {
     //     isEmpty,
