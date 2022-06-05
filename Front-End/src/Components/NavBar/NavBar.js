@@ -30,6 +30,7 @@ const NavBar = (props) => {
         
         <ul>
         <Link to="/shoppingCart">Cart ({props.cart.length})</Link>
+        {/* <FontAwesomeIcon icon="fa-solid fa-cart-shopping-fast" /> */}
         </ul>
         </div>
     </nav>
