@@ -12,7 +12,7 @@ import Products from "./Components/Products/Products";
 import NavBar from "./Components/NavBar/NavBar";
 import ShoppingCart from "./Components/ShoppingCart/ShoppingCart";
 import New from "./Pages/New";
-import EditProduct from "./Components/EditProduct.js/EditProductDetails";
+import EditProduct from "./Components/EditProductDetails.js/EditProductDetails";
 
 // Components
 import About from './Components/Profiles/About';
@@ -21,13 +21,15 @@ import LogIn from "./Components/myAccount/LogIn";
 function App() {
 
   const [cart, setCart] = useState([]);
-
+  const [login, setLogin] = useState({
+    status: false
+  })
 
   const addToCart = (products) => {
     console.log("we are in addToCart");
     setCart([...cart, products]);
   };
-  console.log(cart);
+  // console.log(cart);
 
 
   const removeFromCart = (id) => {
@@ -35,10 +37,15 @@ function App() {
     setCart(cart.filter((product) => product.id != id));
   };
 
+  const signIn = () =>{
+    setLogin({...login, status: !login.status})
+  };
+
+  console.log(login)
   return (
     <div className="App">
     
-      <NavBar cart={cart} />
+      <NavBar cart={cart} login={login} />
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/users" element={<Test />} />
@@ -47,7 +54,7 @@ function App() {
         <Route path="/newproduct" element={<New />}/>
         <Route path="/products/:id/edit" element={<EditProduct />}/>
         <Route path="/shoppingCart" element={<ShoppingCart func={removeFromCart} setCart={setCart}  cart={cart} />}/>
-        <Route path="/account" element={<LogIn />} />
+        <Route path="/account" element={<LogIn func={signIn}/>} />
         <Route path="/about" element={<About />} />
       </Routes>
     </div>
