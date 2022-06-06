@@ -18,10 +18,15 @@ const ProductDetails = ({ addToCart }) => {
         })
     }, [URL, id]);
 
+    // const addToCart = (item) => {
+    //     props.func(item)
+    //     };
+    
+
     const { image, name, description, price } = product;
     return (
 
-        <Card className='h-100 shadow rounded  py-5' style={{ color: '#000'}}>
+        <Card className='card-mb-3  py-5' width="50%" style={{ color: '#000'}}>
             <Card.Img src={image} className="card-img-top" width="50%" alt={name}/>
             <Card.Body className='d-flex flex-column'>
                 <Card.Title>{name}</Card.Title>
