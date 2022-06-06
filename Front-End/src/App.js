@@ -49,7 +49,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/users" element={<Test />} />
-        <Route path="/products/:id" element={<ProductDetails />} />
+        <Route path="/products/:id" element={<ProductDetails func={addToCart} cart={cart}/>} />
         <Route path="/products" element={<Products func={addToCart} cart={cart} />}/>
         <Route path="/newproduct" element={<New />}/>
         <Route path="/products/:id/edit" element={<EditProduct />}/>

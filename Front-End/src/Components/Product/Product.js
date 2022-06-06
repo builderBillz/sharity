@@ -15,7 +15,7 @@ function Product({ product, addToCart }) {
             </Link>
             <Card.Text className="text-secondary">{product.description}</Card.Text>
             <Card.Text className="card text-end fw-bolder">${product.price}</Card.Text>
-            <div className="d-grid justify-content-end mt-4">
+            <div className="d-grid justify-content-center mt-4">
 
             <Button className="btn btn-outline-light"  onClick={() => addToCart(product)}>Buy now</Button>
             </div>

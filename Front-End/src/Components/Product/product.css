@@ -1,0 +1,12 @@
+Card.Img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+
+}
+
+#products {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
