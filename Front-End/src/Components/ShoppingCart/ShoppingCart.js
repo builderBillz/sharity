@@ -49,6 +49,7 @@ if (!props.cart.length) {
     const subtotal = (prices.reduce((a,b) => a + b ))
     const tax = Number((subtotal * 0.08875).toFixed(2))
     const total = Number((subtotal + tax).toFixed(2))
+    const donation = (subtotal * .10).toFixed(2)
     console.log(total)
 
     return (
@@ -93,9 +94,10 @@ if (!props.cart.length) {
                 </div>
             </div>
             <div>
-                <p>Subtotal: ${subtotal}</p>
+                <p>Subtotal: ${subtotal.toFixed(2)}</p>
                 <p>Tax: ${tax}</p>
                 <p>Total: ${total}</p>
+                <p>St. Jude Donation:${donation} </p>
             </div>
         </div>
     )
