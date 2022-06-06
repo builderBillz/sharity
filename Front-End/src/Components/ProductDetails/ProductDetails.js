@@ -2,8 +2,9 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import { Button, Card } from 'react-bootstrap';
 
-const ProductDetails = () => {
+const ProductDetails = ({ addToCart }) => {
     const URL = process.env.REACT_APP_API_URL;
     const [product, setProduct] = useState([]);
     const { id } = useParams();
@@ -20,12 +21,19 @@ const ProductDetails = () => {
     const { image, name, description, price } = product;
     return (
 
-        <div>
-            <img src={image} alt={name} width="200px" height="200px" />
-            <h3>{name}</h3>
-            <h3>{description}</h3>
-            <h3>{price}</h3>
-        </div>
+        <Card className='h-100 shadow rounded  py-5' style={{ color: '#000'}}>
+            <Card.Img src={image} className="card-img-top" width="50%" alt={name}/>
+            <Card.Body className='d-flex flex-column'>
+                <Card.Title>{name}</Card.Title>
+                <Card.Text className='text-secondary'>{description}</Card.Text>
+                <Card.Text>${price}</Card.Text>
+                <div className='d-grid justify-content-center mt-4'>
+                    <Button className='btn btn-outline-light' onClick={() => addToCart(product)}>Add to Cart</Button>
+                </div>
+            </Card.Body>
+            
+            
+        </Card>
     )
 
 

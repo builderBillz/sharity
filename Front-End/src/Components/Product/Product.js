@@ -2,7 +2,7 @@
 import { Button, Card } from 'react-bootstrap';
 
 function Product({ product, addToCart }) {
-//passed addToBag as props from products components to update how many items in cart
+
 
   return (
       <Card className="h-100 shadow rounded" style={{ color: "#000"}}>
@@ -12,7 +12,7 @@ function Product({ product, addToCart }) {
             <Card.Title>{product.name}</Card.Title>
             <Card.Text className="text-secondary">{product.description}</Card.Text>
             <Card.Text className="card text-end fw-bolder">${product.price}</Card.Text>
-            <div className="d-grid justify-content-end mt-4">
+            <div className="d-grid justify-content-center mt-4">
 
             <Button className="btn btn-outline-light"  onClick={() => addToCart(product)}>Buy now</Button>
             </div>
