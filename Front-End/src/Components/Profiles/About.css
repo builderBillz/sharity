@@ -1,13 +1,13 @@
 .sharity {
     text-align: center;
-    color: #4E4B4A;
+    color: rgba(31,48,244,1); 
     font-size: 65px;
 }
 
 p {
     text-align: center;
     font-size: 30px;
-    color: #4E4B4A;
+    color: gray;
     padding-left: 2em;
     padding-right: 2em;
 }
@@ -16,7 +16,7 @@ p {
     text-align: center;
     font-size: 70px;
     font-weight: 800px;
-    color: #4E4B4A;
+    color: rgba(31,48,244,1); 
     padding-bottom: 2px;
 }
 
