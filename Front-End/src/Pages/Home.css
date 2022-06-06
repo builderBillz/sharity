@@ -1,7 +1,7 @@
-img {
+.home-logo {
     float:left;
     margin-top: 50px; 
-    margin-left: 40px; 
+    margin-left: 50px; 
     margin-right: 140px; 
     margin-bottom: 20px; 
     border: 2px gray;
@@ -13,4 +13,5 @@ img {
 .welcome {
     padding-top: 210px; 
     padding-left: 40px; 
+    font-size: 75px;
 } 
