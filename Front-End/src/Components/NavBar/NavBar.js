@@ -2,13 +2,20 @@ import { Link } from "react-router-dom";
 import './NavBar.css'
 
 const NavBar = (props) => {
+
+  const currentStatus = props.login.status
+  console.log(currentStatus)
   return (
    <>
    <nav className='NavBar'>
       <ul>
       
-        <Link to='/'>Sharity</Link>
-       
+      <div className="logo">
+        <Link to='/'>
+        <img src='https://i.imgur.com/cVKQV9J.jpg'></img>
+        </Link>
+        </div>
+        
       </ul>
 
       <div className="links">
@@ -21,11 +28,12 @@ const NavBar = (props) => {
         </ul>
 
         <ul>
-        <Link to="/account">My Account</Link>
+        <Link to="/account">{currentStatus ? "Hi Jace" :"My Account"}</Link>
         </ul>
         
         <ul>
         <Link to="/shoppingCart">Cart ({props.cart.length})</Link>
+        {/* <FontAwesomeIcon icon="fa-solid fa-cart-shopping-fast" /> */}
         </ul>
         </div>
     </nav>
