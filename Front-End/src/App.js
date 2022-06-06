@@ -13,6 +13,7 @@ import NavBar from "./Components/NavBar/NavBar";
 import ShoppingCart from "./Components/ShoppingCart/ShoppingCart";
 import New from "./Pages/New";
 import EditProduct from "./Components/EditProduct.js/EditProductDetails";
+import Footer from "./Components/Footer/Footer";
 
 // Components
 import About from './Components/Profiles/About';
@@ -50,6 +51,7 @@ function App() {
         <Route path="/account" element={<LogIn />} />
         <Route path="/about" element={<About />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
