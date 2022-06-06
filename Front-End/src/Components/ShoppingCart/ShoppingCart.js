@@ -41,7 +41,7 @@ return (
                                 {props.cart.map((product, id) => {
                                     return (
                                         <tr className='align-middle' key={id} >
-                                        <td><img src={product.image} alt={product.name} width="55%" /></td>
+                                        <td><img src={product.image} alt={product.name} width="55%" length="55%" object-fit="cover"/></td>
                                         <td className="card-title align-top fw-bolder">{product.name}</td>
                                         <td className="text-secondary">{product.description}</td>
                                         <td className="align-top fw-bolder">${product.price}</td>

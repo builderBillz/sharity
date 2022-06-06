@@ -26,11 +26,11 @@ const ProductDetails = ({ addToCart }) => {
     const { image, name, description, price } = product;
     return (
 
-        <Card className='card-mb-3  py-5' width="50%" style={{ color: '#000'}}>
-            <Card.Img src={image} className="card-img-top" width="50%" alt={name}/>
+        <Card className='card-mb-4  py-5 d-grid justify-content-center'  style={{ color: '#000'}}>
+            <Card.Img src={image} className="img-fluid " style={{ maxWidth: 550}} alt={name}/>
             <Card.Body className='d-flex flex-column'>
-                <Card.Title>{name}</Card.Title>
-                <Card.Text className='text-secondary'>{description}</Card.Text>
+                <Card.Title style={{ fontSize: 38}}>{name}</Card.Title>
+                <Card.Text className='text-secondary' style={{ fontSize: 20}}>{description}</Card.Text>
                 <Card.Text>${price}</Card.Text>
                 <div className='d-grid justify-content-center mt-4'>
                     <Button className='btn btn-outline-light' onClick={() => addToCart(product)}>Add to Cart</Button>
