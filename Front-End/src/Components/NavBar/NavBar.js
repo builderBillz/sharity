@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import './NavBar.css'
 
 const NavBar = (props) => {
+
+  const currentStatus = props.login.status
+  console.log(currentStatus)
   return (
    <>
    <nav className='NavBar'>
@@ -25,7 +28,7 @@ const NavBar = (props) => {
         </ul>
 
         <ul>
-        <Link to="/account">My Account</Link>
+        <Link to="/account">{currentStatus ? "Hi Jace" :"My Account"}</Link>
         </ul>
         
         <ul>
