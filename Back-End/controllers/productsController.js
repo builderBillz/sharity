@@ -10,6 +10,7 @@ const products = express.Router();
 products.get("/", async (request, response) => {
   console.log("GET request to /products");
   const allProducts = await getAllProducts();
+  console.log(allProducts)
   if (allProducts.length === 0) {
     response.status(500).json({ error: "server error" });
     return;
