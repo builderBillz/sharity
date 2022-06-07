@@ -1,4 +1,5 @@
 import axios from "axios";
+import './NewProducts.css'
 
 const { useState } = require("react");
 const { useNavigate } = require("react-router-dom");
@@ -34,7 +35,7 @@ function NewProduct(){
     return (
 
         
-        <div>
+        <div className="form">
             <form onSubmit={handleSubmit}>
                 <label htmlFor="name">Name:</label>
                 <input
@@ -45,6 +46,10 @@ function NewProduct(){
                 placeholder="Name of the item for sale"
                 required
                 />
+                <br>
+                </br>
+                <br>
+                </br>
                 <label htmlFor="image">Image URL:</label>
                 <input
                 id="image"
@@ -53,6 +58,11 @@ function NewProduct(){
                 onChange={handleTextChange}
                 placeholder="Link to your image here"
                 />
+
+                <br>
+                </br>
+                <br>
+                </br>
                 <label htmlFor="description">Specs:</label>
                 <input
                 id="description"
@@ -61,6 +71,10 @@ function NewProduct(){
                 onChange={handleTextChange}
                 placeholder="describe the product here"
                 />
+                <br>
+                </br>
+                <br>
+                </br>
                 <label htmlFor="Price">Price: $</label>
                 <input
                 id="price"
@@ -69,7 +83,11 @@ function NewProduct(){
                 onChange={handleTextChange}
                 placeholder="how much are you selling it for"
                 />
-                <input className="button" type="submit" />
+                <br>
+                </br>
+                <br>
+                </br>
+                <button>Post</button>
             </form>
 
         </div>
