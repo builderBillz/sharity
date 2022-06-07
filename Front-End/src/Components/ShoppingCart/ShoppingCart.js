@@ -70,13 +70,13 @@ if (!props.cart.length) {
                                                     <img src={product.image} alt={product.name} width="55%" />
                                                 </Link>
                                                 </td>
-                                            <td className="card-title align-top fw-bolder">
+                                            <td className="card-title align-top">
                                                 <Link to={`/products/${product.id}`}>
                                                     {product.name}
                                                 </Link>
                                                 </td>
                                             <td className="text-secondary">{product.description}</td>
-                                            <td className="align-top fw-bolder">${product.price}</td>
+                                            <td style={{fontSize: 24}}className="align-top fw-bolder">${product.price}</td>
                                             
                                             <td>
     
