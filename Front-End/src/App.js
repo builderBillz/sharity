@@ -1,7 +1,6 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 
 // Pages
