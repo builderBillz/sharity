@@ -1,5 +1,13 @@
 SHARITY
 
+DEPLOYMENT:
+
+FRONT-END:
+https://marvelous-dango-93c3c6.netlify.app
+
+BACK-END: 
+https://sharity-app-capstone.herokuapp.com
+
 PLANNING IDEATION:
 https://docs.google.com/document/d/1V-UAmG_MaPwzqwEemF_BFUnck6mQERrZBDBEWfX6SNE/edit
 
