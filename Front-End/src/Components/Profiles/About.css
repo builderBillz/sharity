@@ -1,0 +1,29 @@
+.sharity {
+    text-align: center;
+    color: rgba(31,48,244,1); 
+    font-size: 65px;
+}
+
+p {
+    text-align: center;
+    font-size: 30px;
+    color: gray;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.our-team {
+    text-align: center;
+    font-size: 70px;
+    font-weight: 800px;
+    color: rgba(31,48,244,1); 
+    padding-bottom: 2px;
+}
+
+.blue-text {
+    color: cobalt blue;
+}
+
+.profile {
+    background-color: #e2dfde;
+}

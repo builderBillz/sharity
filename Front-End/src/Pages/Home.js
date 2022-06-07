@@ -1,9 +1,14 @@
-const Home = () => {
+
+import LOGO from '../images/LOGO.png';
+import './Home.css';
+
+function Home() {
   return (
-    <div>
-      <h2>Welcome to SHARITY</h2>
+    <div className='home'>
+      <img className='home-logo' src={LOGO} alt='Sharity logo'  width='378' height='378' />
+	    <h1 className='welcome'>Welcome to Sharity!</h1>
     </div>
-  );
-};
+  )
+}
 
 export default Home;

@@ -10,6 +10,7 @@ const products = express.Router();
 products.get("/", async (request, response) => {
   console.log("GET request to /products");
   const allProducts = await getAllProducts();
+  console.log(allProducts)
   if (allProducts.length === 0) {
     response.status(500).json({ error: "server error" });
     return;
@@ -52,6 +53,7 @@ products.delete("/:id", async (request, response) => {
 products.put("/:id", async (req, res) => {
     // const { id } = req.params;
     const updatedProduct = await updateProduct(req.params.id, req.body);
+    console.log("put/ id")
     if (updatedProduct.id) {
       res.status(200).json(updatedProduct);
     } else {
