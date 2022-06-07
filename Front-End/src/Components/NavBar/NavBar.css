@@ -34,9 +34,11 @@ display: flex;
 }
 
 .NavBar ul a:hover {
-color: yellow;
+color: lightblue;
 cursor: pointer;
-transform: scale(-1);
+/* transform: scale(-1); */
+text-decoration: underline;
+font-weight: bold;
 
 }
 
@@ -56,4 +58,3 @@ a::after {
   width: 100%;
   left: 0;
 }
-
